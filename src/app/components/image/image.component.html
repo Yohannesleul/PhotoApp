@@ -1,0 +1,12 @@
+<input type="text" placeholder="Search By Photo description" [(ngModel)]="resultData.alt_description"/>  
+<!-- <input type="text" placeholder="Photographer First Name"/>   -->
+<div *ngFor="let item of (resultData | filter:resultData.alt_description)"> 
+    <!-- <div *ngFor="let item of (resultData)">  -->
+    <br>
+    <mat-grid-list cols="2" rowHeight="200px">
+     <mat-grid-tile rowspan="3" colspan="1" style="background-color: rgb(228, 224, 220);"> <img src={{item.urls.regular}}></mat-grid-tile>
+     <mat-grid-tile rowspan="1" colspan="1" style="background-color: rgb(255, 252, 249);"> <p style="font-weight: 400;font-size: larger;"><B>Desc:</B> {{item.alt_description}}</p></mat-grid-tile>
+     <mat-grid-tile rowspan="1" colspan="1" style="background-color: rgb(255, 252, 249);"> <p style="font-weight: 400;font-size: larger;"> <B>Photo By:</B> {{item.user.name}}</p></mat-grid-tile>
+     <mat-grid-tile rowspan="1" colspan="1" style="background-color: rgb(255, 252, 249);"> <p><span class="fa fa-star fa-2x" [class.rate]="isRated" (click)="changerating()"></span></p></mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -1,0 +1,25 @@
+
+$headerBg:rgb(235, 226, 222); $headerColor:black;
+  header {
+    padding: 60px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    background-color: $headerBg; color: $headerColor;
+  }
+
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+  .rate {
+      color: orange;
+  }
+
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
